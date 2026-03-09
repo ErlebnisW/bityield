@@ -1,17 +1,17 @@
-# btc-vol-trading — Options Volatility Skill (BitYield Framework)
+# bityield — Options Volatility Skill (Baowin Framework)
 
-An OpenClaw agent skill for analyzing and trading options volatility using the **BitYield** three-dimensional framework. Covers BTC options on Deribit and equity options (NVDA, AAPL, TSLA, META, AMZN, GOOGL, MSFT, etc.).
+An OpenClaw agent skill for analyzing and trading options volatility using the **Baowin** three-dimensional framework. Covers BTC options on Deribit and equity options (NVDA, AAPL, TSLA, META, AMZN, GOOGL, MSFT, etc.).
 
 ## What This Skill Does
 
 - **Real-time Vol Surface analysis**: Fetch ATM IV, 25d Risk Reversal, 25d Butterfly across expiries
 - **Multi-ticker skew scanner**: Rank equity options by skew and kurtosis premium simultaneously
 - **Position calculator**: Entry price, net premium, Greeks (Delta/Gamma/Vega/Theta/Vanna), Delta hedge ratio, and P&L scenarios at expiry
-- **Strategy explainer**: Full BitYield framework (Variance → Skewness → Kurtosis), backtest metrics, prerequisites skill tree
+- **Strategy explainer**: Full Baowin framework (Variance → Skewness → Kurtosis), backtest metrics, prerequisites skill tree
 
 ## Strategy Overview
 
-BitYield decomposes options premium into three statistical moments and harvests each independently:
+Baowin decomposes options premium into three statistical moments and harvests each independently:
 
 | Dimension | Instrument | Signal |
 |-----------|------------|--------|
@@ -30,11 +30,11 @@ BitYield decomposes options premium into three statistical moments and harvests 
 ## Skill Structure
 
 ```
-btc-vol-trading/
+bityield/
 ├── SKILL.md                        # Agent trigger + workflow guide
 ├── README.md                       # This file
 ├── references/
-│   ├── strategy-core.md            # BitYield strategy deep-dive
+│   ├── strategy-core.md            # Baowin strategy deep-dive
 │   └── vol-surface-guide.md        # Vol Surface construction & operations
 └── scripts/
     └── fetch_vol_surface.py        # Live BTC Vol Surface from Deribit API
@@ -50,10 +50,10 @@ python3 scripts/fetch_vol_surface.py
 
 Sample output:
 ```
-NVDA $177.82 — Vol Surface
+BTC: $67,839
 Expiry       DTE   ATM IV    25d RR    25d BF
-2026-04-17   38d    48.8%   -13.7%    +1.3%   ← Strong skew signal
-2026-06-18  100d    49.3%   -10.0%    -0.4%
+11MAR26       1d    69.0%    -6.8%    +2.7%   ← Put Skew high + Kurtosis rich
+20MAR26      10d    60.6%    -7.9%    +1.4%
 ```
 
 ### Equity Options (via yfinance)
@@ -65,9 +65,9 @@ Use `lastPrice` + `brentq` IV solver — pre-market `bid/ask` is always 0.
 ## Trigger Examples
 
 This skill activates when you mention:
-- Options analysis on any ticker ("analyze NVDA options")
+- Options analysis on any ticker ("analyze NVDA options", "NVDA 期权")
 - Vol Surface / skew / RR / Butterfly
-- BitYield / Baowin strategy questions
+- Baowin strategy questions
 - Greeks (Delta, Vega, Vanna, Volga)
 - 期权 (Chinese: "options")
 
@@ -82,6 +82,6 @@ This skill activates when you mention:
 
 ## References
 
-- BitYield strategy: https://baowin.vercel.app/
+- Baowin strategy: https://baowin.vercel.app/
 - Intro slides: https://baowin-intro.pages.dev/
 - Community: https://t.me/GlobalLife2023
