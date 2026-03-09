@@ -1,17 +1,17 @@
-# bityield — Options Volatility Skill (Baowin Framework)
+# bityield — Options Volatility Skill (BitYield Framework)
 
-An OpenClaw agent skill for analyzing and trading options volatility using the **Baowin** three-dimensional framework. Covers BTC options on Deribit and equity options (NVDA, AAPL, TSLA, META, AMZN, GOOGL, MSFT, etc.).
+An OpenClaw agent skill for analyzing and trading options volatility using the **BitYield** three-dimensional framework. Covers BTC options on Deribit and equity options (NVDA, AAPL, TSLA, META, AMZN, GOOGL, MSFT, etc.).
 
 ## What This Skill Does
 
 - **Real-time Vol Surface analysis**: Fetch ATM IV, 25d Risk Reversal, 25d Butterfly across expiries
 - **Multi-ticker skew scanner**: Rank equity options by skew and kurtosis premium simultaneously
 - **Position calculator**: Entry price, net premium, Greeks (Delta/Gamma/Vega/Theta/Vanna), Delta hedge ratio, and P&L scenarios at expiry
-- **Strategy explainer**: Full Baowin framework (Variance → Skewness → Kurtosis), backtest metrics, prerequisites skill tree
+- **Strategy explainer**: Full BitYield framework (Variance → Skewness → Kurtosis), backtest metrics, prerequisites skill tree
 
 ## Strategy Overview
 
-Baowin decomposes options premium into three statistical moments and harvests each independently:
+BitYield decomposes options premium into three statistical moments and harvests each independently:
 
 | Dimension | Instrument | Signal |
 |-----------|------------|--------|
@@ -34,7 +34,7 @@ bityield/
 ├── SKILL.md                        # Agent trigger + workflow guide
 ├── README.md                       # This file
 ├── references/
-│   ├── strategy-core.md            # Baowin strategy deep-dive
+│   ├── strategy-core.md            # BitYield strategy deep-dive
 │   └── vol-surface-guide.md        # Vol Surface construction & operations
 └── scripts/
     └── fetch_vol_surface.py        # Live BTC Vol Surface from Deribit API
@@ -67,7 +67,7 @@ Use `lastPrice` + `brentq` IV solver — pre-market `bid/ask` is always 0.
 This skill activates when you mention:
 - Options analysis on any ticker ("analyze NVDA options", "NVDA 期权")
 - Vol Surface / skew / RR / Butterfly
-- Baowin strategy questions
+- BitYield strategy questions
 - Greeks (Delta, Vega, Vanna, Volga)
 - 期权 (Chinese: "options")
 
@@ -82,6 +82,6 @@ This skill activates when you mention:
 
 ## References
 
-- Baowin strategy: https://baowin.vercel.app/
+- BitYield strategy: https://baowin.vercel.app/
 - Intro slides: https://baowin-intro.pages.dev/
 - Community: https://t.me/GlobalLife2023

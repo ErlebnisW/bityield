@@ -1,4 +1,4 @@
-# Baowin/BitYield Strategy — Core Knowledge Base
+# BitYield Strategy — Core Knowledge Base
 
 ## 1. Three-Dimensional Volatility Framework
 
@@ -10,7 +10,7 @@ Implied volatility (IV) decomposes into three statistical moments:
 | Skewness | 3rd | Vol Smile slope (which tail is pricier) | Risk Reversal (RR) |
 | Kurtosis | 4th | Vol Smile curvature (fat-tail thickness) | Butterfly (BF) |
 
-**Core Baowin Insight:**
+**Core BitYield Insight:**
 - **Variance**: Can spike without a ceiling in extreme markets (unbounded short-vega risk)
 - **Skewness + Kurtosis**: Bounded fluctuation range → persistent, extractable premium
 
@@ -34,11 +34,11 @@ Implied volatility (IV) decomposes into three statistical moments:
 - Structure: Buy 1 lower strike + Sell 2 middle strikes + Buy 1 higher strike (or OTM Strangle vs ATM Straddle)
 - When BF > 0 (wings expensive): Sell BF = Sell OTM Strangle + Buy ATM Straddle
 - Key metric: 25-delta BF = [IV(25d Call) + IV(25d Put)] / 2 − IV(ATM)
-- Adding BF lifted Sharpe from 1.24 → 3.47+ in Baowin backtests
+- Adding BF lifted Sharpe from 1.24 → 3.47+ in BitYield backtests
 
 ---
 
-## 3. Baowin Strategy Structure
+## 3. BitYield Strategy Structure
 
 **Composite position:**
 1. **Core: Risk Reversal** — Sell expensive OTM Put + Buy OTM Call, Delta-neutral
@@ -63,7 +63,7 @@ Implied volatility (IV) decomposes into three statistical moments:
 
 ---
 
-## 5. Backtest Results (Baowin, Aug 2025 – Feb 2026)
+## 5. Backtest Results (BitYield, Aug 2025 – Feb 2026)
 
 | Version | Ann. Sharpe | Calmar | Max DD | Total Return |
 |---------|-------------|--------|--------|--------------|
@@ -108,7 +108,7 @@ Executing skew trades requires mastery of:
 
 ---
 
-## 9. Baowin Public Information
+## 9. BitYield Public Information
 
 - Strategy details: https://baowin.vercel.app/
 - Minimum subscription: 0.1 BTC (Matrixport custody) or $5M USD equivalent (Deribit SMA)
