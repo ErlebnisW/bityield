@@ -1,5 +1,5 @@
 ---
-name: btc-vol-trading
+name: bityield
 description: BTC and equity options volatility trading knowledge base, centered on the BitYield strategy framework. Use when the user mentions options, vol surface, skew trading, kurtosis, Risk Reversal, Butterfly, Delta hedging, implied volatility, Vega, Vanna, or asks to analyze/trade options on BTC, NVDA, AAPL, TSLA, META, AMZN, MSFT, GOOGL or any other ticker. Triggers include 期权 (options), Vol Surface, RR, skew, skewness, kurtosis, BitYield, Baowin, volatility arbitrage, sell put, iron condor, straddle, strangle, butterfly spread, options P&L.
 ---
 

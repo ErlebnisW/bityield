@@ -42,7 +42,7 @@ Each expiry generates one "smile curve" (Vol Smile).
 
 **Sticky Delta (Smile Delta):**
 - When underlying moves, IV for the same Delta moves with it
-- BitYield uses this approach
+- Baowin uses this approach
 - More accurate but requires full surface recalculation
 
 **In practice:** With Smile Delta hedging, Delta = BS Delta + Vanna × dIV/dS
