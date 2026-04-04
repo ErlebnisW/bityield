@@ -80,7 +80,3 @@ This skill activates when you mention:
 | alternative.me | Crypto Fear & Greed | Free |
 | tardis.dev | Historical Vol Surface | Free (delayed) |
 
-## References
-
-- BitYield strategy: https://baowin.vercel.app/
-- Intro slides: https://baowin-intro.pages.dev/
