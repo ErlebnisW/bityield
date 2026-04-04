@@ -84,4 +84,3 @@ This skill activates when you mention:
 
 - BitYield strategy: https://baowin.vercel.app/
 - Intro slides: https://baowin-intro.pages.dev/
-- Community: https://t.me/GlobalLife2023
